@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@*<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>*@
+
+@*new project*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The grid: Three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .containerTab {
+            padding: 20px;
+            color: white;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Closable button inside the container tab */
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align:center">
+        <h2>@ViewData["Title"]</h2>
+        <p>Click on the boxes below:</p>
+    </div>
+
+    <!-- Three columns -->
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:black;">
+            RETURNS POLICY
+        </div>
+        <div class="column" onclick="openTab('b2');" style="background:grey;">
+            ACCEPTANCE OF SERVICES AND PRODUCTS
+        </div>
+        <div class="column" onclick="openTab('b3');" style="background:black;">
+            DATA ACCESS
+        </div>
+    </div>
+
+    <!-- Full-width columns: (hidden by default) -->
+    <div id="b1" class="containerTab" style="display: none; background: black">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>RETURNS POLICY</h2>
+        <p>
+            Should you wish you return an item to Mountain View Crematoria, there are some rules and conditions that may apply.
+
+            Our policy including the change of mind limits do not exclude or replace your rights under Consumer Guarantees of the Australian Consumer Law, regulations or otherwise as required by law.
+
+            Change of mind
+            If you have changed your mind, we may offer you a refund provided that the refund is made within 30 days of purchase and meets these criteria:
+
+            you are able to provide satisfactory proof of purchase; and
+            the merchandise is in saleable condition, that is it is unworn or unused with all original sealed packaging or tags attached and where the product seal is not broken or tampered; and
+            the item has not been personalised / memorialised; and
+            there have been no cremains or substances placed into the items; and
+            the item has not been sealed; and
+            you agree to pay a 15% restocking fee. This 15% restocking fee is based upon the sale price listed on the tax invoice.
+            Our team members will assess the item (in-store and online returns) to determine whether a refund will be offered in accordance with our Returns Policy. Please note that delivery and memorialisation costs are non-refundable for change of mind returns.
+
+            Postage for change of mind purchases is at the expense of the consumer, Mountain View Crematoria will not pay any amount towards postage for a change of mind return.
+        </p>
+    </div>
+
+    <div id="b2" class="containerTab" style="display: none; background: grey">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2> ACCEPTANCE OF SERVICES AND PRODUCTS</h2>
+        <p>You will be deemed to have accepted a Cremation Service and Products on the earlier of: (a) signing any of the following documents: the Quotation, the Arrangement Form as the Applicant and/or signing these Terms and Conditions; (b) on the date of delivery of the Product or Cremation service; or (c) ordering and paying for the Product and/or Service from our website</p>
+    </div>
+
+    <div id="b3" class="containerTab" style="display: none; background: black">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>DATA ACCESS</h2>
+        <p>You agree to permit us to connect, or to otherwise access data related to the Cremation Service and Products, to allow us to gather, aggregate, compile, and use data in various ways including quality initiatives, benchmarking and reporting services. The data collected by us will be used, during and after the expiration or termination of the Agreement, in a manner that will maintain client and customer level confidentiality.</p>
+    </div>
+
+    <script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+    </script>
+
+</body>
+</html>

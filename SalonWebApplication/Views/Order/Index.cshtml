@@ -1,0 +1,107 @@
+﻿@model IEnumerable<SalonWebApplication.Models.OrderViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Orders</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create New</a>
+</p>
+<table id="tblData" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentTypeId)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Paymentname)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>*@
+           @* <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.ProductQuantities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrices)
+            </th>*@
+            <th>@Html.Label("Actions")</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            @*  <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentType.PaymentName)
+            </td>
+            @* <td>
+            @Html.DisplayFor(modelItem => item.Paymentname)
+        </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>*@
+            @*<td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ProductQuantities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrices)
+            </td>*@
+        <td style="min-width:85px !important">
+
+            <a asp-action="Edit" class="btn-warning" asp-route-id="@item.OrderId "> <i class="fas fa-edit" aria-hidden="true"> </i></a>   |
+            <a asp-action="Details" class="btn-success" asp-route-id="@item.OrderId "> <i class="fa fa-info-circle" aria-hidden="true"> </i></a>  |
+            <a asp-action="Delete" class="btn-danger" asp-route-id="@item.OrderId " onclick="return confirm('Are you sure you would like to delete this piece of information?? ')"> <i class="fas fa-trash-alt"></i></a>
+
+
+
+
+        </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section scripts    {
+<script>
+    $(document).ready(function () {
+        $('#tblData').DataTable();
+    });
+         </script> }

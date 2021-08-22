@@ -1,0 +1,403 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="img-div">
+    <img class="mySlides" src="~/uploads/homepage_images/adam-winger-VjRpkGtS55w-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/greg-trowman-jsuWg7IXx1k-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/raphael-lovaski-Pe9IXUuC6QU-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/shari-sirotnak-oM5YoMhTf8E-unsplash.jpg" />
+    
+   
+</div>
+
+<div class="img-div">
+    <img class="mySlides" src="~/uploads/homepage_images/adam-winger-VjRpkGtS55w-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/greg-trowman-jsuWg7IXx1k-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/raphael-lovaski-Pe9IXUuC6QU-unsplash.jpg" />
+    <img class="mySlides" src="~/uploads/homepage_images/shari-sirotnak-oM5YoMhTf8E-unsplash.jpg" />
+    </div>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container-width {
+            width: 90%;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .am-sect {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            font-family: Helvetica, serif;
+        }
+
+        .am-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .am-content {
+            float: left;
+            padding: 7px;
+            width: 490px;
+            color: #444;
+            font-weight: 100;
+            margin-top: 50px;
+        }
+
+        .am-pre {
+            padding: 7px;
+            color: #b1b1b1;
+            font-size: 15px;
+        }
+
+        .am-desc {
+            padding: 7px;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .bdg-sect {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            font-family: Helvetica, serif;
+            background-color: #fafafa;
+        }
+
+        .bdg-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 55px;
+            color: #555555;
+        }
+
+        .badges {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            width: 290px;
+            font-family: Helvetica, serif;
+            background-color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            font-weight: 100;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .badge-header {
+            height: 115px;
+            background-image: url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+            background-position: left top, center center;
+            background-attachment: scroll, fixed;
+            overflow: hidden;
+        }
+
+        .badge-name {
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+
+        .badge-role {
+            color: #777;
+            font-size: 1em;
+            margin-bottom: 25px;
+        }
+
+        .badge-desc {
+            font-size: 0.85rem;
+            line-height: 20px;
+        }
+
+        .badge-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: 5px solid #fff;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+            margin-top: -75px;
+            position: relative;
+        }
+
+        .badge-body {
+            margin: 35px 10px;
+        }
+
+        .badge-foot {
+            color: #fff;
+            background-color: #a290a5;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .badge-link {
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            font-weight: 700;
+            background-color: #fff;
+            color: #a290a5;
+            display: block;
+            border-radius: 100%;
+            margin: 0 10px;
+        }
+
+        #iumooq {
+            height: 518px;
+            width: 804px;
+        }
+
+        #iv3pd {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-weight: 700;
+        }
+
+        #ilv1j {
+            font-weight: 900;
+            font-size: 35px;
+        }
+
+        #i37he {
+            padding: 10px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0;
+            font-weight: 900;
+            font-size: 4px;
+        }
+
+        .footer-under{
+  background-color:#312833;
+  padding-bottom:100px;
+  padding-top:100px;
+  min-height:500px;
+  color:#eee;
+  position:relative;
+  font-weight:100;
+  font-family:Helvetica,serif;
+}
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  justify-content:space-around;
+}
+.foot-list{
+  float:left;
+  width:200px;
+}
+.foot-list-title{
+  font-weight:400;
+  margin-bottom:10px;
+  padding:0.5em 0;
+}
+.foot-list-item{
+  color:rgba(238, 238, 238, 0.8);
+  font-size:0.8em;
+  padding:0.5em 0;
+}
+.foot-list-item:hover{
+  color:rgba(238, 238, 238, 1);
+}
+.foot-form-cont{
+  width:300px;
+  float:right;
+}
+.foot-form-title{
+  color:rgba(255,255,255,0.75);
+  font-weight:400;
+  margin-bottom:10px;
+  padding:0.5em 0;
+  text-align:right;
+  font-size:2em;
+}
+.foot-form-desc{
+  font-size:0.8em;
+  color:rgba(255,255,255,0.55);
+  line-height:20px;
+  text-align:right;
+  margin-bottom:15px;
+}
+.sub-input{
+  width:100%;
+  margin-bottom:15px;
+  padding:7px 10px;
+  border-radius:2px;
+  color:#fff;
+  background-color:#554c57;
+  border:none;
+}
+.sub-btn{
+  width:100%;
+  margin:15px 0;
+  background-color:#785580;
+  border:none;
+  color:#fff;
+  border-radius:2px;
+  padding:7px 10px;
+  font-size:1em;
+  cursor:pointer;
+}
+.sub-btn:hover{
+  background-color:#91699a;
+}
+.sub-btn:active{
+  background-color:#573f5c;
+}
+
+  .foot-form-title{
+    width:auto;
+  }
+
+}
+
+    </style>
+    <title></title>
+</head>
+<body>
+
+    <section id="iv3pd" class="am-sect">
+        <div id="i37he">
+            Location
+        </div>
+        <div id="i038l" class="container-width">
+            <div id="i56eb" class="am-content">
+                <div id="ilv1j" class="am-pre">
+                    Find us on your mobile
+                </div>
+                <div id="iz77k" class="am-desc">
+                    You can create image blocks with the command from the left panel and edit them with double click
+                </div>
+            </div>
+            <div id="ih42d" class="am-container">
+                <iframe frameborder="0" id="iumooq" src="https://maps.google.com/maps?&z=1&t=q&output=embed"></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="ir10fa" class="bdg-sect">
+        <div class="container-width">
+            <h1 class="bdg-title">
+                The team
+            </h1>
+            <div class="badges">
+                <div class="badge">
+                    <div class="badge-header">
+                    </div>
+                    <img src="~/uploads/R.jpg" class="badge-avatar" />
+                    <div class="badge-body">
+                        <div class="badge-name">
+                            Adam Smith
+                        </div>
+                        <div class="badge-role">
+                            CEO
+                        </div>
+                        <div class="badge-desc">
+                            <p>  Lorem ipsum  <br />adipiscing elit
+                            sed do eiusmod tempor </p>
+                        </div>
+                    </div>
+                    <div class="badge-foot">
+                        <span class="badge-link">f</span>
+                        <span class="badge-link">t</span>
+                        <span class="badge-link">ln</span>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-header">
+                    </div>
+                    <img src="~/uploads/R.jpg" class="badge-avatar" />
+                    <div class="badge-body">
+                        <div class="badge-name">
+                            John Black
+                        </div>
+                        <div class="badge-role">
+                            Salon Manager
+                        </div>
+                        <div class="badge-desc">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur <br /> Lorem ipsum dolor sit amet consectetur
+                            </p>
+                        </div>
+                    </div>
+                    <div class="badge-foot">
+                        <span class="badge-link">f</span>
+                        <span class="badge-link">t</span>
+                        <span class="badge-link">ln</span>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-header">
+                    </div>
+                    <img src="~/uploads/R.jpg" class="badge-avatar" />
+                    <div class="badge-body">
+                        <div class="badge-name">
+                            Jessica White
+                        </div>
+                        <div class="badge-role">
+                          Salon Adminisistrator
+                        </div>
+                        <div class="badge-desc">
+                            <p>  Lorem ipsum dolor sit amet, consectetur <br />
+                            dunt ut labore ipsum dolor sit</p>  
+                        </div>
+                    </div>
+                    <div class="badge-foot">
+                        <span class="badge-link">f</span>
+                        <span class="badge-link">t</span>
+                        <span class="badge-link">ln</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-under" id="i0gmcp">
+        <div class="container-width">
+            <div class="footer-container" id="iotqz6">
+                <div class="form-sub">
+                    <div class="foot-form-cont" id="ictngw">
+                        <div class="foot-form-title">
+                            Subscribe
+                        </div>
+                        <div class="foot-form-desc">
+                            Subscribe to our newsletter to receive exclusive offers and the latest news
+                        </div>
+                        <input name="name" placeholder="Name" class="sub-input" />
+                        <input name="email" placeholder="Email" class="sub-input" />
+                        <button type="button" class="sub-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+        </div>
+    </footer>
+</body>
+</html>

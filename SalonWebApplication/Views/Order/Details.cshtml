@@ -1,0 +1,63 @@
+﻿@model SalonWebApplication.Models.OrderViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentTypeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentType.PaymentName)
+        </dd>
+    </dl>
+</div>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Quantity</th>
+    </tr>
+    @foreach (var detail in Model.OrdersDetails)
+    {
+        <tr>
+            <td>@detail.Product.ProductName</td>
+            <td>@detail.Product.ProductCost</td>
+            <td>@detail.Quantity</td>
+        </tr>
+    }
+</table>
+<div>
+  
+    <a asp-action="Index">Back to List</a>
+</div>

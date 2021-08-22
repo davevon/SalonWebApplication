@@ -1,0 +1,252 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.mySlides {
+    width: 100%;
+    height: 100%;
+}
+
+.img-div {
+    left: 0;
+  
+}
+.fade-div {
+
+
+    background-color: rgba(0,0,0,.5);
+}
+
+    .fade-div div {
+
+        padding:20px;
+        color: #ffff;
+    }
+
+.fade-div div h2{
+    font-size:50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container-width {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.am-sect {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: Helvetica, serif;
+}
+
+.am-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.am-content {
+    float: left;
+    padding: 7px;
+    width: 490px;
+    color: #444;
+    font-weight: 100;
+    margin-top: 50px;
+}
+
+.am-pre {
+    padding: 7px;
+    color: #b1b1b1;
+    font-size: 15px;
+}
+
+.am-desc {
+    padding: 7px;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.bdg-sect {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: Helvetica, serif;
+    background-color: #fafafa;
+}
+
+.bdg-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 55px;
+    color: #555555;
+}
+
+.badges {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.badge {
+    width: 290px;
+    font-family: Helvetica, serif;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    font-weight: 100;
+    overflow: hidden;
+    text-align: center;
+}
+
+.badge-header {
+    height: 115px;
+    background-image: url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+    background-position: left top, center center;
+    background-attachment: scroll, fixed;
+    overflow: hidden;
+}
+
+.badge-name {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.badge-role {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+
+.badge-desc {
+    font-size: 0.85rem;
+    line-height: 20px;
+}
+
+.badge-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    margin-top: -75px;
+    position: relative;
+}
+
+.badge-body {
+    margin: 35px 10px;
+}
+
+.badge-foot {
+    color: #fff;
+    background-color: #a290a5;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: flex;
+    justify-content: center;
+}
+
+.badge-link {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    background-color: #fff;
+    color: #a290a5;
+    display: block;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+#iumooq {
+    height: 518px;
+    width: 804px;
+}
+
+#iv3pd {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: 700;
+}
+
+#ilv1j {
+    font-weight: 900;
+    font-size: 35px;
+}

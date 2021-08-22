@@ -1,0 +1,61 @@
+﻿@model SalonWebApplication.Models.OrderViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderId" class="control-label"></label>
+                <input type="text" value="@Model.OrderId" name="OrderIdReadOnly" readonly="readonly" class="form-control" />
+                <input asp-for="OrderId" type="hidden"  />
+                <span asp-validation-for="OrderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                @Html.DropDownListFor(q => q.CustomerId, new SelectList(Model.Customers, "Value", "Text"), "Select a customer",
+           new { @class = "form-control select2" })
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderDate" class="control-label"></label>
+                @Html.TextBoxFor(x => x.OrderDate, "{0:yyyy-MM-ddTHH:mm:ss}", new
+                      {
+                          @class = "form-control",
+                          required = "required",
+                          @type = "datetime-local"
+                      })
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total" class="control-label"></label>
+                <input asp-for="Total" class="form-control" />
+                <span asp-validation-for="Total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentType.PaymentName" class="control-label"></label>
+                @Html.DropDownListFor(q => q.PaymentTypeId, new SelectList(Model.PaymentTypes, "Value", "Text"), "Select a Payment Type",
+            new { @class = "form-control" })
+                <span asp-validation-for="PaymentType.PaymentName" class="text-danger"></span>            
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,52 @@
+﻿@model SalonWebApplication.Models.ServiceAppointmentViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1></h1>
+
+<h4>Create Service Appointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @*  <div class="form-group">
+              <label asp-for="ServiceAppointmentId" class="control-label"></label>
+              @Html.DropDownListFor(q => q.ServiceAppointmentId, new SelectList(Model.ServiceAppointments, "Value", "Text"), "Select an appointment",
+        new { @class = "form-control" })
+              <span asp-validation-for="ServiceAppointmentId" class="text-danger"></span>
+          </div>*@
+
+            <div class="form-group">
+                <label asp-for="ServiceId" class="control-label"></label>
+                @Html.DropDownListFor(q => q.ServiceId, new SelectList(ViewBag.Services, "Value", "Text"), "Select a service",
+          new { @class = "form-control" })
+                <span asp-validation-for="ServiceId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AppointmentId" class="control-label"></label>
+                @Html.DropDownListFor(q => q.AppointmentId, new SelectList(ViewBag.Appointments, "Value", "Text"), "Select customer",
+          new { @class = "form-control" })
+                <span asp-validation-for="AppointmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+
+                <input type="reset" value="Clear Form" class="btn btn-sm btn-primary" id="btnClear" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
