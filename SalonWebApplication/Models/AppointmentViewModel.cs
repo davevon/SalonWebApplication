@@ -32,5 +32,14 @@ namespace SalonWebApplication.Models
         public IEnumerable<SelectListItem> Customers { get; set; }
         [DisplayName("Customer")]
         public int CustomerId { get; set; }
+
+
+        public ServiceViewModel Service { get; set; }
+        public IEnumerable<SelectListItem> Services { get; set; }
+        [DisplayName("Service")]
+        public int ServiceId { get; set; }
+
+
+
     }
 }

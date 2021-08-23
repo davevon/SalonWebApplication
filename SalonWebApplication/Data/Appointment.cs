@@ -28,6 +28,13 @@ namespace SalonWebApplication.Data
         public Customer Customer { get; set; }
         public int CustomerId { get; set; }
 
-      
+        [ForeignKey("ServiceId")]
+        public Service Service { get; set; }
+        public int ServiceId { get; set; }
+
+
+
+
+
     }
 }
