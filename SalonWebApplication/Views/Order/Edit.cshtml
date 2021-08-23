@@ -24,6 +24,7 @@
            new { @class = "form-control select2" })
                 <span asp-validation-for="CustomerId" class="text-danger"></span>
             </div>
+@* jus to see if the push work*@
             <div class="form-group">
                 <label asp-for="OrderDate" class="control-label"></label>
                 @Html.TextBoxFor(x => x.OrderDate, "{0:yyyy-MM-ddTHH:mm:ss}", new
