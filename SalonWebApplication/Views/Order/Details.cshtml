@@ -44,16 +44,16 @@
 </div>
 <table>
     <tr>
-        <th>Product Name</th>
-        <th>Product Price</th>
+        <th>Product Name&nbsp;|</th>
+        <th>Product Price&nbsp;|</th>
         <th>Product Quantity</th>
     </tr>
     @foreach (var detail in Model.OrdersDetails)
     {
         <tr>
-            <td>@detail.Product.ProductName</td>
-            <td>@detail.Product.ProductCost</td>
-            <td>@detail.Quantity</td>
+            <td style="text-align: center">@detail.Product.ProductName</td>
+            <td style="text-align: center">@detail.Product.ProductCost</td>
+            <td style="text-align: center">@detail.Quantity</td>
         </tr>
     }
 </table>

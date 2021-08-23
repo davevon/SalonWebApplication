@@ -20,10 +20,11 @@ namespace SalonWebApplication.Controllers
         private readonly IOrderRepository _OrderRepo;
         private readonly ICustomerRepository _customerRepo;
         private readonly IPaymentTypeRepository _paymentRepo;
+        private readonly IServiceRepository _serviceRepo;
         private readonly IProductRepository _prodRepo;
         private readonly IMapper _mapper;
 
-        public OrderController(IOrdersDetailsRepository OrdersDetailsRepo, IOrderRepository orderrepo, IProductRepository prodRepo, ICustomerRepository customerRepo, IPaymentTypeRepository paymentRepo, IMapper mapper)
+        public OrderController(IOrdersDetailsRepository OrdersDetailsRepo, IServiceRepository serviceRepo, IOrderRepository orderrepo, IProductRepository prodRepo, ICustomerRepository customerRepo, IPaymentTypeRepository paymentRepo, IMapper mapper)
         {
             _ordersDetailsRepo = OrdersDetailsRepo;
             _OrderRepo = orderrepo;
@@ -31,6 +32,7 @@ namespace SalonWebApplication.Controllers
             _paymentRepo = paymentRepo;
             _prodRepo = prodRepo;
             _mapper = mapper;
+            _serviceRepo = serviceRepo;
 
         }
 

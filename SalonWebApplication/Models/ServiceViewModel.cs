@@ -11,7 +11,7 @@ namespace SalonWebApplication.Models
     public class ServiceViewModel
     {
         [Key]
-        [DisplayName("Service Id")]
+        [DisplayName("Service Number")]
         public int ServiceId { get; set; }
         public IEnumerable<SelectListItem> Services { get; set; }
 
