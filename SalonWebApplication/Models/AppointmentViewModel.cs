@@ -14,17 +14,17 @@ namespace SalonWebApplication.Models
     {
         [Key]
         public int AppointmentId { get; set; }
-        [DisplayName("Date of Appointment")]
+        [DisplayName("Date ")]
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public string AppointmentDate { get; set; }
-        [DisplayName(" Appointment Time")]
+        [DisplayName(" Time")]
         [DataType(DataType.DateTime), DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
 
         public string AppointmentTime { get; set; }
 
         public EmployeeViewModel Employee { get; set; }
         public IEnumerable<SelectListItem> Employees { get; set; }
-        [DisplayName("Employee")]
+        [DisplayName("Worker")]
         public int EmployeeId { get; set; }
         
 

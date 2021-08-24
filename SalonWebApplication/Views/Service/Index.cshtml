@@ -21,9 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.ServiceCost)
             </th>
-            <th>
+          @*  <th>
                 @Html.DisplayNameFor(model => model.Duration)
-            </th>
+            </th>*@
             <th>@Html.Label("Actions")</th>
         </tr>
     </thead>
@@ -41,9 +41,9 @@
                     @item.ServiceCost.ToString("C")
                     @* @Html.DisplayFor(modelItem => item.ServiceCost)*@
                 </td>
-                <td>
+              @*  <td>
                     @Html.DisplayFor(modelItem => item.Duration)
-                </td>
+                </td>*@
                 <td style="min-width:85px !important">
 
                     <a asp-action="Edit" class="btn-warning" asp-route-id="@item.ServiceId "> <i class="fas fa-edit" aria-hidden="true"> </i></a>   |

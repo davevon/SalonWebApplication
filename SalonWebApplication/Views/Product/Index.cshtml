@@ -21,9 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.ProductCost)
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.ProductQty)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ProductImg)
             </th>
@@ -44,9 +44,9 @@
                     @item.ProductCost.ToString("C")
                     @*@Html.DisplayFor(modelItem => item.ProductCost)*@
                 </td>
-                <td>
+               @* <td>
                     @Html.DisplayFor(modelItem => item.ProductQty)
-                </td>
+                </td>*@
                 <td>
                     <img src="~/uploads/product_images/@item.ProductImg" width="50" height="50" />
                     @*@Html.DisplayFor(modelItem => item.ProductImg)*@

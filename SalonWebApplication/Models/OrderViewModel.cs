@@ -13,24 +13,19 @@ namespace SalonWebApplication.Models
     public class OrderViewModel
     {
         [Key]
-        [DisplayName("Order Number")]
+        [DisplayName("Order#")]
         public int OrderId { get; set; }    
 
          
         public CustomerViewModel Customer { get; set; }
         [IgnoreMap]
         public IEnumerable<SelectListItem> Customers { get; set; }
-        [Display(Name ="Customer Name")]
-
-        [DisplayName("Customer Number")]
+        [DisplayName(" Name")]
         [Required]
         public int CustomerId { get; set; }
-
-
-        [DisplayName("Customer Name")]
         public string CustomerName { get; set; }
 
-        [DisplayName("Order Date")]
+        [DisplayName("Date")]
         //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm tt}")]        
         [Required(ErrorMessage = "The Order Date is required.")]
         public DateTime  OrderDate { get; set; }
@@ -41,13 +36,13 @@ namespace SalonWebApplication.Models
         public PaymentTypeViewModel PaymentType { get; set; }
         [IgnoreMap]
         public IEnumerable<SelectListItem> PaymentTypes { get; set; }
-        [DisplayName("Payment Type")]
+        [DisplayName("Payment")]
         public int PaymentTypeId { get; set; }
         /*  public string Paymentname { get; set; }*/
 
         public List<OrdersDetailsViewModel> OrdersDetails { get; set; }
 
-        [Display(Name ="Product Name")]
+        [Display(Name ="Product")]
         public int ProductId { get; set; }
         public ProductViewModel Product { get; set; }
         [IgnoreMap]

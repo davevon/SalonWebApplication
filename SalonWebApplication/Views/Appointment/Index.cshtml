@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create New</a>
 </p>
-<table id="tblData" class="table">
+<table id="example" class="table">
     <thead>
         <tr>
             @* <th>
@@ -42,7 +42,7 @@
                         @Html.DisplayFor(modelItem => item.AppointmentId)
                     </td>*@
                 <td>
-                    @Html.DisplayFor(modelItem =>(item.AppointmentDate))
+                    @Html.DisplayFor(modelItem => (item.AppointmentDate))
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.AppointmentTime)
@@ -53,7 +53,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Customer.CustomerFirstName) @Html.DisplayFor(modelItem => item.Customer.CustomerLastName)
                 </td>
-                 <td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Service.ServiceName) @Html.DisplayFor(modelItem => item.Service.ServiceCost)
                 </td>
 
@@ -73,9 +73,39 @@
     </tbody>
 </table>
 
-@section scripts    {
+@*@section scripts    {
     <script>
         $(document).ready(function () {
             $('#tblData').DataTable();
         });
-    </script> }
+    </script> }*@
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.9/js/dataTables.fixedHeader.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Setup - add a text input to each footer cell
+        $('#example thead tr').clone(true).appendTo('#example thead');
+        $('#example thead tr:eq(1) th').each(function (i) {
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+
+            $('input', this).on('keyup change', function () {
+                if (table.column(i).search() !== this.value) {
+                    table
+                        .column(i)
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+
+        var table = $('#example').DataTable({
+            orderCellsTop: true,
+            fixedHeader: true
+        });
+    });
+</script>
