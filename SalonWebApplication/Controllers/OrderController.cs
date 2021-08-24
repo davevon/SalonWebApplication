@@ -139,11 +139,11 @@ namespace SalonWebApplication.Controllers
 
                 var product = _prodRepo.FindById(model.ProductId);
                 var totalcost = model.Total;
-                if (product.ProductQty > model.ProductQuantities)
-                {
+               /* if (product.ProductQty > model.ProductQuantities)
+                {*/
                     totalcost = product.ProductCost * model.ProductQuantities;
-                }
-                else if (model.ProductQuantities <= 0)
+               /* }*/
+              if (model.ProductQuantities <= 0)
                 {
                     ModelState.AddModelError("", "Please enter a value for the quantity");
                     return View(model);
