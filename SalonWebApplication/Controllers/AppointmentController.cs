@@ -18,15 +18,18 @@ namespace SalonWebApplication.Controllers
     {
         private readonly IAppointmentRepository _AppointmentRepo;
         private readonly IEmployeeRepository _employeeRepo;
+         private readonly IServiceRepository _serviceRepo;
+
         private readonly ICustomerRepository _customerRepo;
         private readonly IMapper _mapper;
 
-        public AppointmentController(IAppointmentRepository AppointmentRepo, IEmployeeRepository employeeRepo,
+        public AppointmentController(IAppointmentRepository AppointmentRepo, IServiceRepository serviceRepo, IEmployeeRepository employeeRepo,
             ICustomerRepository customerRepo, IMapper mapper)
         {
             _AppointmentRepo = AppointmentRepo;
             _customerRepo = customerRepo;
             _employeeRepo = employeeRepo;
+            _serviceRepo = serviceRepo;
 
             _mapper = mapper;
         }
@@ -74,6 +77,15 @@ namespace SalonWebApplication.Controllers
 
             });
 
+            var service = _serviceRepo.FindAll();
+            var ServoClients = service.Select(q => new SelectListItem
+            {
+                Text = q.ServiceName + q.ServiceCost,
+                Value = q.ServiceId.ToString()
+
+
+            });
+
             var customer = _customerRepo.FindAll();
             var employeeCustomer = customer.Select(q => new SelectListItem
             {
@@ -84,7 +96,8 @@ namespace SalonWebApplication.Controllers
             var model = new AppointmentViewModel
             {
                 Employees = employeeClients,
-                Customers = employeeCustomer
+                Customers = employeeCustomer,
+                Services = ServoClients
             };
 
             return View(model);
@@ -137,6 +150,15 @@ namespace SalonWebApplication.Controllers
 
             });
 
+            var service = _serviceRepo.FindAll();
+            var servoClients = service.Select(q => new SelectListItem
+            {
+                Text = q.ServiceName + q.ServiceCost,
+                Value = q.ServiceId.ToString()
+
+
+            });
+
             var customer = _customerRepo.FindAll();
             var employeeCustomer = customer.Select(q => new SelectListItem
             {
@@ -148,6 +170,7 @@ namespace SalonWebApplication.Controllers
 
             model.Employees = employeeClients;
             model.Customers = employeeCustomer;
+            model.Services = servoClients;
             return View(model);
 
 
@@ -167,6 +190,15 @@ namespace SalonWebApplication.Controllers
 
             });
 
+            var service = _serviceRepo.FindAll();
+            var servoClients = service.Select(q => new SelectListItem
+            {
+                Text = q.ServiceName + q.ServiceCost,
+                Value = q.ServiceId.ToString()
+
+
+            });
+
             var customer = _customerRepo.FindAll();
             var employeeCustomer = customer.Select(q => new SelectListItem
             {
@@ -178,6 +210,7 @@ namespace SalonWebApplication.Controllers
 
             model.Employees = employeeClients;
             model.Customers = employeeCustomer;
+            model.Services = servoClients;
             try
             {
                 if (!ModelState.IsValid)

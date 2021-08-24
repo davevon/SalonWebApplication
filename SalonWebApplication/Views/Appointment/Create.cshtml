@@ -39,6 +39,14 @@
              new { @class = "form-control select2" })
                 <span asp-validation-for="CustomerId" class="text-danger"></span>
             </div>
+             <div class="form-group">
+                <label asp-for="ServiceId" class="control-label"></label>
+                @Html.DropDownListFor(q => q.ServiceId, new SelectList(Model.Services, "Value", "Text"), "ServiceType",
+             new { @class = "form-control select2" })
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" /> 
 
