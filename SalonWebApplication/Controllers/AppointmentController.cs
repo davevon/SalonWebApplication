@@ -51,6 +51,9 @@ namespace SalonWebApplication.Controllers
                 throw;
             }
 
+
+
+
         }
 
         // GET: AppointmentController/Details/5
